@@ -23,7 +23,7 @@ jobs:
           command: cd ./storefront-backend-api && npm install
       - run:
           name: Angular Build
-          command: cd ./my-store && ng run build
+          command: cd ./my-store && ng run build --prod
       - run:
           name: API Build
           command: cd ./storefront-backend-api && npm run build
