@@ -1,0 +1,13 @@
+
+{
+  "scripts": {
+      "backend:install": "cd ./storefront-backend-api && npm install",
+      "frontend:install": "cd ./my-store && npm install",
+      "backend:build": "cd ./storefront-backend-api && npm run build",
+      "frontend:build": "cd ./my-store && npm run build",
+      "backend:test": "cd ./storefront-backend-api && npm run test",
+      "backend:deploy": "cd ./storefront-backend-api && npm run deploy",
+      "frontend:deploy": "cd ./my-store && npm run deploy"
+  },
+  "devDependencies": {}
+}

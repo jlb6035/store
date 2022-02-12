@@ -1,0 +1,34 @@
+version: 2.1
+orbs:
+  node: circleci/node@4.1.0
+  eb: circleci/aws-elastic-beanstalk@1.0.0
+  aws-cli: circleci/aws-cli@2.0.2
+jobs:
+  build:
+    docker:
+      - image: "cimg/base:stable"
+    steps:
+      - node/install
+      - checkout
+      - aws-cli/setup
+      - eb/setup
+      - run:
+          name: Angular Install
+          command: cd ./my-store && npm install
+      - run:
+          name: API Install
+          command: cd ./storefront-backend-api npm install
+      - run:
+          name: Angular Build
+          command: cd ./my-store && ng run build
+      - run:
+          name: API Build
+          command: cd ./storefront-backend-api && npm run build
+      - run:
+          name: API Deployment
+          command: |
+            eb init --platform 'Node.js 14 running on 64bit Amazon Linux 2' --region 'us-east-1' 'storefront-backend-api'
+            eb deploy
+      - run:
+          name: Angular Deployment
+          command: cd ./my-store &&  aws s3 cp --recursive --acl public-read ./dist s3://storefront-frontend/
