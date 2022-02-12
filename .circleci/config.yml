@@ -13,6 +13,9 @@ jobs:
       - aws-cli/setup
       - eb/setup
       - run:
+          name: Install angularcli
+          command: sudo npm install -g @angular/cli@latest
+      - run:
           name: Angular Install
           command: cd ./my-store && npm install
       - run:
