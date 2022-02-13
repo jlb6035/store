@@ -35,4 +35,4 @@ jobs:
           command: cd ./server && eb deploy
       - run:
           name: Angular Deployment
-          command: cd ./my-store &&  aws s3 cp --recursive --acl public-read ./dist s3://storefront-frontend/
+          command: cd ./client &&  aws s3 cp --recursive --acl public-read ./dist s3://storefront-frontend/
