@@ -29,9 +29,7 @@ jobs:
           command: cd ./server && npm run build
       - run:
           name: API Deployment
-          command: |
-            eb init --platform 'Node.js 14 running on 64bit Amazon Linux 2' --region 'us-east-1' 'storefront-backend-api'
-            eb deploy
+          command: cd ./server && eb deploy
       - run:
           name: Angular Deployment
           command: cd ./my-store &&  aws s3 cp --recursive --acl public-read ./dist s3://storefront-frontend/
