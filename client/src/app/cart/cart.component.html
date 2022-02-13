@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="column-6">
+            <div class="cart-container" *ngFor="let item of shoppingCart">
+                <app-cart-item [item]="item" (removeItem)="removeProduct($event)" (updateQuantity)="updateQuantity($event)"></app-cart-item>
+            </div>
+        </div>
+        <div class="column-6">
+            <app-checkout-form></app-checkout-form>
+        </div>
+    </div>
+    </div>
+    <br>
+<div class="total">
+    Total ${{ total }}
+</div>
