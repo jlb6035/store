@@ -17,16 +17,16 @@ jobs:
           command: npm install -g @angular/cli@13.2.2
       - run:
           name: Angular Install
-          command: cd ./my-store && npm install
+          command: cd ./client && npm install
       - run:
           name: API Install
-          command: cd ./storefront-backend-api && npm install
+          command: cd ./server && npm install
       - run:
           name: Angular Build
-          command: cd ./my-store && npm run build
+          command: cd ./client && npm run build
       - run:
           name: API Build
-          command: cd ./storefront-backend-api && npm run build
+          command: cd ./server && npm run build
       - run:
           name: API Deployment
           command: |
