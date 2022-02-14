@@ -17,22 +17,22 @@ jobs:
           command: npm run angular-cli:install
       - run:
           name: Angular Install
-          command: cd ./client && npm install
+          command: npm run angular:install
       - run:
           name: API Install
-          command: cd ./server && npm install
+          command: npm run api:install
       - run:
           name: Angular Build
-          command: cd ./client && npm run build
+          command: npm run angular:build
       - run:
           name: API Build
-          command: cd ./server && npm run build
+          command: npm run api:build
       - run:
           name: API Pre Deployment
-          command: cd ./server && eb init --platform 'Node.js 14 running on 64bit Amazon Linux 2' --region 'us-east-1' 'storefront-backend-api'
+          command: npm run pre:deploy
       - run:
           name: API  Deployment
-          command: cd ./server && eb deploy
+          command: npm run api:deploy
       - run:
           name: Angular Deployment
-          command: cd ./client &&  aws s3 cp --recursive --acl public-read ./dist s3://storefront-frontend/
+          command: npm run angular:deploy

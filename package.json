@@ -2,13 +2,14 @@
 {
   "scripts": {
       "angular-cli:install":"npm install -g @angular/cli@13.2.2",
-      "backend:install": "cd ./storefront-backend-api && npm install",
-      "frontend:install": "cd ./my-store && npm install",
-      "backend:build": "cd ./storefront-backend-api && npm run build",
-      "frontend:build": "cd ./my-store && npm run build",
-      "backend:test": "cd ./storefront-backend-api && npm run test",
-      "backend:deploy": "cd ./storefront-backend-api && npm run deploy",
-      "frontend:deploy": "cd ./my-store && npm run deploy"
+      "angular:install":"cd ./client && npm install",
+      "api:install": "cd ./server && npm install",
+      "angular:build": "cd ./client && npm run build",
+      "api:build": "cd ./server && npm run build",
+      "pre:deploy": "cd ./server && eb init --platform 'Node.js 14 running on 64bit Amazon Linux 2' --region 'us-east-1' 'storefront-backend-api'",
+      "api:deploy": "cd ./server && eb deploy",
+      "angular:deploy": "cd ./client &&  aws s3 cp --recursive --acl public-read ./dist s3://storefront-frontend/"
+
   },
   "devDependencies": {}
 }
