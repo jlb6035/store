@@ -12,12 +12,12 @@ jobs:
       - checkout
       - aws-cli/setup
       - eb/setup
-      - run:
-          name: Install angularcli
-          command: npm install -g @angular/cli@13.2.2
-      - run:
-          name: Angular Install
-          command: cd ./client && npm install
+    #   - run:
+    #       name: Install angularcli
+    #       command: npm install -g @angular/cli@13.2.2
+    #   - run:
+    #       name: Angular Install
+    #       command: cd ./client && npm install
       - run:
           name: API Install
           command: cd ./server && npm install
