@@ -1,6 +1,7 @@
 
 {
   "scripts": {
+      "angular-cli:install":"npm install -g @angular/cli@13.2.2",
       "backend:install": "cd ./storefront-backend-api && npm install",
       "frontend:install": "cd ./my-store && npm install",
       "backend:build": "cd ./storefront-backend-api && npm run build",
