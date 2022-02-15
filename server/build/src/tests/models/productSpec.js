@@ -70,7 +70,7 @@ describe("Product Model", function () {
                 case 0: return [4 /*yield*/, store.index()];
                 case 1:
                     result = _a.sent();
-                    expect(result.length).toEqual(3);
+                    expect(result.length).toEqual(5);
                     return [2 /*return*/];
             }
         });

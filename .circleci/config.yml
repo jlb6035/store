@@ -28,11 +28,14 @@ jobs:
           name: API Build
           command: npm run api:build
       - run:
-          name: API Pre Deployment
-          command: npm run pre:deploy
-      - run:
-          name: API  Deployment
-          command: npm run api:deploy
-      - run:
-          name: Angular Deployment
-          command: npm run angular:deploy
+          name: Unit Test
+          command: npm run server:test
+    #   - run:
+    #       name: API Pre Deployment
+    #       command: npm run pre:deploy
+    #   - run:
+    #       name: API  Deployment
+    #       command: npm run api:deploy
+    #   - run:
+    #       name: Angular Deployment
+    #       command: npm run angular:deploy

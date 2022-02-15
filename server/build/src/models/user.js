@@ -63,7 +63,7 @@ var UserStore = /** @class */ (function () {
                         return [2 /*return*/, result.rows];
                     case 3:
                         err_1 = _a.sent();
-                        throw new Error("Something went wrong... ".concat(err_1));
+                        throw new Error("Something went wrong... " + err_1);
                     case 4: return [2 /*return*/];
                 }
             });
@@ -87,7 +87,7 @@ var UserStore = /** @class */ (function () {
                         return [2 /*return*/, result.rows[0]];
                     case 3:
                         err_2 = _a.sent();
-                        throw new Error("Something went wrong... ".concat(err_2));
+                        throw new Error("Something went wrong... " + err_2);
                     case 4: return [2 /*return*/];
                 }
             });
@@ -112,7 +112,7 @@ var UserStore = /** @class */ (function () {
                         return [2 /*return*/, result.rows[0]];
                     case 3:
                         err_3 = _a.sent();
-                        throw new Error("Something went wrong... ".concat(err_3));
+                        throw new Error("Something went wrong... " + err_3);
                     case 4: return [2 /*return*/];
                 }
             });

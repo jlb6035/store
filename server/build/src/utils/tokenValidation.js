@@ -13,7 +13,7 @@ var tokenValidation = function (req, res) {
     }
     catch (err) {
         res.status(401);
-        res.json("Invalid Token... ".concat(err));
+        res.json("Invalid Token... " + err);
         return;
     }
 };

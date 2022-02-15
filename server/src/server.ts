@@ -1,6 +1,8 @@
 import express from "express";
 import bodyParser from 'body-parser';
 import productRoutes from "./handlers/product";
+import orderRoutes from "./handlers/order";
+import userRoutes from "./handlers/user";
 import cors from "cors";
 
 const app = express();
@@ -14,6 +16,8 @@ app.get("/", (req, res) => {
 });
 
 productRoutes(app);
+orderRoutes(app);
+userRoutes(app);
 
 app.listen(port, ()=>{
     console.log(`Starting app on port ${port}`);

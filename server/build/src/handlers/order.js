@@ -52,7 +52,7 @@ var index = function (req, res) { return __awaiter(void 0, void 0, void 0, funct
                 return [3 /*break*/, 3];
             case 2:
                 err_1 = _a.sent();
-                throw new Error("Something went wrong ... ".concat(err_1));
+                throw new Error("Something went wrong ... " + err_1);
             case 3: return [2 /*return*/];
         }
     });
@@ -71,7 +71,7 @@ var show = function (req, res) { return __awaiter(void 0, void 0, void 0, functi
                 return [3 /*break*/, 3];
             case 2:
                 err_2 = _a.sent();
-                throw new Error("Something went wrong ... ".concat(err_2));
+                throw new Error("Something went wrong ... " + err_2);
             case 3: return [2 /*return*/];
         }
     });
@@ -89,7 +89,7 @@ var create = function (req, res) { return __awaiter(void 0, void 0, void 0, func
                 return [3 /*break*/, 3];
             case 2:
                 err_3 = _a.sent();
-                throw new Error("Something went wrong ... ".concat(err_3));
+                throw new Error("Something went wrong ... " + err_3);
             case 3: return [2 /*return*/];
         }
     });
@@ -107,7 +107,7 @@ var addProduct = function (req, res) { return __awaiter(void 0, void 0, void 0, 
                 return [3 /*break*/, 3];
             case 2:
                 err_4 = _a.sent();
-                throw new Error("Something went wrong ... ".concat(err_4));
+                throw new Error("Something went wrong ... " + err_4);
             case 3: return [2 /*return*/];
         }
     });

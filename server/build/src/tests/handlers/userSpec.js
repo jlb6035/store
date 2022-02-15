@@ -50,7 +50,7 @@ describe('Test User Handlers', function () {
                 case 0: return [4 /*yield*/, request.post('/users').send({ firstname: 'Test3', lastname: 'User', password: 'abc123' })];
                 case 1:
                     res = _a.sent();
-                    return [4 /*yield*/, request.get('/users').set('Authorization', "Bearer ".concat(res.body))];
+                    return [4 /*yield*/, request.get('/users').set('Authorization', "Bearer " + res.body)];
                 case 2:
                     response = _a.sent();
                     expect(response.status).toBe(200);
@@ -65,7 +65,7 @@ describe('Test User Handlers', function () {
                 case 0: return [4 /*yield*/, request.post('/users').send({ firstname: 'Test4', lastname: 'User', password: 'abc123' })];
                 case 1:
                     res = _a.sent();
-                    return [4 /*yield*/, request.get('/users/1').set('Authorization', "Bearer ".concat(res.body))];
+                    return [4 /*yield*/, request.get('/users/1').set('Authorization', "Bearer " + res.body)];
                 case 2:
                     response = _a.sent();
                     expect(response.status).toBe(200);
