@@ -21,8 +21,16 @@ http://storefront-frontend.s3-website-us-east-1.amazonaws.com/
 
 ![Postgres](./documentation/assests/RDS.png)
 
+### Pipeline
 
-Pipeline Flow
+![ Pipline](./documentation/assests/pipeline-steps-1.png)
+
+![ Pipeline](./documentation/assests/pipeline-steps-2.png)
+
+![ Pipeline ENV variables](./documentation/assests/pipeline-env-vars.png)
+
+
+### Pipeline Flow
 
 ![Pipeline](./documentation/assests/pipeline-diagram.png)
 
