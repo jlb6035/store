@@ -34,6 +34,9 @@ jobs:
           name: API Pre Deployment
           command: npm run pre:deploy
       - run:
+          name: Set Env Vars
+          command: npm run set:env
+      - run:
           name: API  Deployment
           command: npm run api:deploy
       - run:
