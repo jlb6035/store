@@ -33,9 +33,9 @@ jobs:
       - run:
           name: Set Env Vars
           command: npm run set:env
-      - run:
-          name: Unit Test
-          command: npm run server:test
+    #   - run:
+    #       name: Unit Test
+    #       command: npm run server:test
       - run:
           name: Update ENV VAR
           command: npm run update:env
