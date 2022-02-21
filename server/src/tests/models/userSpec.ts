@@ -16,6 +16,6 @@ describe("User Model", () => {
     it('It should create a new user', async ()=> {
         await store.create({firstname: 'James', lastname: 'Brown', password: 'abc123'});
         const result: User[] = await store.index();
-        expect(result.length).toEqual(5);
+        expect(result.length).toEqual(10);
     });
   });
