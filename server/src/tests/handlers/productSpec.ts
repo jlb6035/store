@@ -18,7 +18,7 @@ describe('Test Product Handlers', () => {
     it('Should create a new product', async () => {
         const res = await request.post('/users').send({firstname: 'Test3', lastname: 'User', password: 'abc123'});
 
-        const response = await request.post('/products').send({name: 'Nintendo 64', price: 100}).set('Authorization', `Bearer ${res.body}`);
+        const response = await request.post('/products').send({name: 'Nintendo 64', price: 100, url: 'https://m.media-amazon.com/images/I/61j0V37zKcL._SL1500_.jpg'}).set('Authorization', `Bearer ${res.body}`);
         expect(response.status).toBe(200);
     });
  
