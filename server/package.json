@@ -11,7 +11,8 @@
     "start": "node build/src/server.js",
     "build": "npx tsc",
     "jasmine": "jasmine",
-    "deploy": "eb deploy"
+    "deploy": "eb deploy",
+    "migrate": "db-migrate up"
   },
   "author": "Jordan Boyd",
   "license": "ISC",
