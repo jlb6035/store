@@ -7,11 +7,12 @@
     "node": ">=0.14"
   },
   "scripts": {
-    "test": "npm run build && db-migrate reset --env test && db-migrate up --env test && npm run jasmine",
+    "test": "npm run build && db-migrate reset --env test && db-migrate up --env test && npm run jasmine && db-migrate reset --env test",
     "start": "node build/src/server.js",
     "build": "npx tsc",
     "jasmine": "jasmine",
-    "deploy": "eb deploy"
+    "deploy": "eb deploy",
+    "migrate": "npm run build && db-migrate reset --env test && db-migrate up"
   },
   "author": "Jordan Boyd",
   "license": "ISC",
