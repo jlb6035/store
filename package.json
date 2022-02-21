@@ -8,7 +8,7 @@
       "api:build": "cd ./server && npm run build",
       "server:test": "cd ./server && npm run test",
       "pre:deploy": "cd ./server && eb init --platform 'Node.js 14 running on 64bit Amazon Linux 2' --region 'us-east-1' 'storefront-backend-api'",
-      "set:env": "cd ./server && eb setenv ExampleVar=ExampleValue",
+      "set:env": "cd ./server && eb setenv ExampleVar=$POSTGRES_USER",
       "api:deploy": "cd ./server && eb deploy",
       "angular:deploy": "cd ./client &&  aws s3 cp --recursive --acl public-read ./dist s3://storefront-frontend/"
 
