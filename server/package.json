@@ -7,7 +7,7 @@
     "node": ">=0.14"
   },
   "scripts": {
-    "test": "npm run build && db-migrate reset --env test && db-migrate up --env test && npm run jasmine && db-migrate reset --env test",
+    "test": "npm run build && db-migrate reset --env test && db-migrate up --env test && npm run jasmine",
     "start": "node build/src/server.js",
     "build": "npx tsc",
     "jasmine": "jasmine",
