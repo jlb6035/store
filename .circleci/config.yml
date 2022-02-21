@@ -1,12 +1,13 @@
+filters:
+branches:
+    only:
+    - main
 version: 2.1
 orbs:
   node: circleci/node@4.7.0
   eb: circleci/aws-elastic-beanstalk@1.0.0
   aws-cli: circleci/aws-cli@2.0.2
 jobs:
-    filters:
-    branches:
-        only: /main\/.*/
   build:
     docker:
       - image: "cimg/base:stable"
